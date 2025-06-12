@@ -5,10 +5,7 @@ import os
 
 def initialize_rag_pipeline(doc_dir="data/sample_docs", rebuild=False):
     if rebuild or not os.path.exists("faiss_index"):
-        print("Loading and processing local change ")
-        documents = load_and_split_documents(doc_dir)
-        print("Creating vector store document 1")
-        create_vector_store(documents)
+        print("Loading and processing Demo github ") 
     print("Loading vector store")
     vectorstore = load_vector_store()
     print("Creating QA chain")
